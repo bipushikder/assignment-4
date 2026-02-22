@@ -4,11 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Job</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="./style.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    
 </head>
 <body>
 
+     <!--1. dash-board  -->
+      
+     <header class="dashboard">
+    <h1 class="text-4xl font-bold">Job Application Tracker</h1>
+        <div class="counts">
+            <div class="headCard1 ">Total <br><span id="allCount" class="text-2xl font-bold">8</span></div>
+            <div class="headCard2">Interview <br><span id="interviewCount" class="text-emerald-500 font-bold text-2xl">0</span></div>
+        <div class="headCard3">Rejected <br><span id="rejectedCount" class="text-red-500 font-bold text-2xl">0</span></div>
+    </div>
+  </header>
+
+  <!-- ---------------------------------------------------- -->
+
+<hr class="text-gray-300">
+
+  <!-- 2. Available Jobs -->
+   
+  <section class="jobs">
     
+    <div class="jobs-header">
+      <div class="jobs-header-content">
+        <h2 class="text-2xl font-semibold">Available Jobs</h2>
+        <p>8 jobs</p>
+      </div>
+        
+        <div class="tabs">
+          <button class="tab active" data-tab="all">All</button>
+          <button class="tab" data-tab="interview">Interview</button>
+          <button class="tab" data-tab="rejected">Rejected</button>
+      </div>
+    </div>
+    
+<!-- ------------------------------------------------------------- -->
+    
+
+
+    <!--3.  Cards Container -->
+    <div id="jobCards" class="cards"></div>
+
+
+
+    <!--4. Empty-message -->
+
+    <div id="emptyMessage" class="empty hidden">
+        <img src="empty.png" alt="No jobs">
+          <h3>No Jobs Available</h3>
+          <p>Please check back later.</p>
+    </div>
+  </section>
 
     <script src="./script.js"></script>
 </body>

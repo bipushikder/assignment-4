@@ -1,3 +1,144 @@
-h1{
-    color: greenyellow;
+
+@import "tailwindcss";
+
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+   background-color: #f1f2f4;
+}
+
+      /* 1. dash-board */
+
+.dashboard{
+
+  color: #002C5C;
+  padding: 20px;
+}
+
+.counts {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+  /* background-color: #fff;
+  gap: 30px; */
+ 
+}
+.headCard1{
+    width: 359px;
+    height: 97px;
+    padding: 2rem;
+    border-radius: 10px;
+     background-color: #fff;
+  
+}
+.headCard2{
+    width: 359px;
+    height: 97px;
+    padding: 2rem;
+    border-radius: 10px;
+     background-color: #fff;
+  
+}
+.headCard3{
+    width: 359px;
+    height: 97px;
+    padding: 2rem;
+    border-radius: 10px;
+     background-color: #fff;
+  
+}
+/* -------------------------- */
+
+      /* 2. available jobs  */
+
+.jobs{
+  padding: 20px;
+}
+.jobs-header-content{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  color: #002C5C;
+}
+.tabs {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.tab{
+  padding: 10px 20px;
+  border: none;
+  background: #e5e7eb;
+  cursor: pointer;
+}
+.tab.active {
+  background: #3B82F6;
+  color: white;
+}
+/* -------------------------------------------------------- */
+
+
+  /* 3.cards and buttons  */
+
+  
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+  gap: 15px;
+}
+.card{
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 8px;
+  background: #fff;
+}
+.card h3{
+  margin: 0;
+  font-size: 1rem;
+  color: #002C5C;
+  font-weight: 700;
+}
+.card p{
+  color: #64748B;
+}
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+button{
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.interview-btn{
+  background: #10b981;
+  color: white;
+}
+.rejected-btn{
+  background: #ef4444;
+  color: white;
+  position: relative;
+}
+.delete-btn{
+  background: #6b7280;
+  color: white;
+}
+.empty{
+  text-align: center;
+  margin-top: 30px;
+}
+.hidden{
+  display: none;
+}
+
+
+/*  Responsive */
+@media (max-width: 570px) {
+  .counts {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
