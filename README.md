@@ -2,60 +2,52 @@
 
     ans:
 
- a.   getElementById ---> একটি ID দিয়ে শুধু একটি element ফেরত দেয় |
+ a.   getElementById --->  one id give us one element.
 
-    b. getElementsByClassName----> class নাম দিয়ে একাধিক element ফেরত দেয় |
+    b. getElementsByClassName---->  class name give us more element.
 
- c.querySelector ----> প্রথম matching element ফেরত  দেয় |
+ c.querySelector ----> only one  matching element  rutrn us
 
-    d. querySelectorAll---> সব matching element ফেরত - দেয়, যেটা NodeList আকারে থাকে |
+    d. querySelectorAll--->  all maching elements return us to  nodelist methods.
 
 
 
 2. How do you create and insert a new element into the DOM?
 
     ans:
-    
-      আমরা document.createElement() ব্যবহার করি। তারপর সেই element এ content যোগ করে appendChild()  দিয়ে DOM এ 
-      
-      বসাই |
+
+      At first we are use document.createElement(). Then, those element of content add to appendChild() and sit to Dom.
 
  3. What is Event Bubbling? And how does it work?
 
     ans:
 
-    ইভেন্ট বাবলিং হলো JavaScript এর একটি মেকানিজম, যেখানে কোনো child element এ event ঘটলে সেই event ধাপে ধাপে তার parent element পর্যন্ত উপরে 
-    
-    propagate হয় |
+       Event Bubbling is a mechanism in JavaScript, event occurs on a child element, that event propagates step by step upward to its parent elements.
+        In short: Event bubbling  travels from the bottom (child) up to the top (parent).
 
-    #########  Event বাবলিং মানে হলো event নিচ থেকে উপরে ওঠা |
+    How it works:
+    Suppose, you have a parent <div> and inside it a child <button>. If you attach a click event to both elements, then you click on the child button, first the child’s event will trigger, and then the event will bubble up to the parent <div> and trigger its event.
 
-
-    কাজ করে :
-
-     তোমার কাছে একটা parent <div> আছে, তার মধ্যে একটা child <button> আছে। যদি তুমি দুটোতেই click event বসাও, তাহলে যখন child এ click 
-       
-       করবে, প্রথমে child এর event trigger হবে, তারপর সেই event parent এ চলে যাবে |
 
 
  4. What is Event Delegation in JavaScript? Why is it useful?
 
     ans:
-        Event Delegation: হলো JavaScript এর একটি technique যেখানে আমরা parent element এ event listener বসাই, আর সেই listener child elements এর event ধরতে পারে।
+        Event Delegation: is a javascript technique, we attach parent element to event listener. And that listener child elements catch the event.
 
-    কাজ করে:
+    how it works:
 
- তোমার কাছে একটা <ul> আছে, তার মধ্যে অনেকগুলো <li> আছে। যদি প্রতিটি <li> তে আলাদা আলাদা click listener বসাও, তাহলে কোড অনেক বড় হয়ে যাবে। কিন্তু Event Delegation ব্যবহার করলে শুধু parent <ul> এ listener বসালেই সব <li> এর click event ধরা যাবে |
+                Suppose, you have a <ul> with many <li> elements inside it. If you attach separate click listeners to each <li>, the code will be very large. using Event Delegation, you only need to place a single listener on the parent <ul>, and that listener will be able to catch the click events of all the <li> elements.
+
 
 
 5.  What is the difference between preventDefault() and stopPropagation() methods?
 
     ans:
-        preventDefault() → browser এর default কাজ বন্ধ করে (যেমন link এ click করলে redirect না হওয়া, form submit না হওয়া)।
-        
-        stopPropagation() → event parent element এ bubble হওয়া বন্ধ করে
 
+a. preventDefault() → Stop the browser’s default behavior (for example, clicking a link won’t redirect, submitting a form won’t reload the page).
 
+b.stopPropagation() → Prevents the event from bubbling up to the parent element.
 
 
      
